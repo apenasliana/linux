@@ -1,0 +1,49 @@
+	Comandos sobre processos do sistema
+
+ps 	- listando processos
+kill    - matando um processo
+killall - matando processos pelo nome
+w 	- lista de usuarios logados
+
+
+===============================================
+
+ps - listando processos
+
+$ ps [opções]
+	Quando um programa é executado no sistema, 
+	ele recebe um número de identificação, chamado PID
+$ ps aux
+	Mostra detalhadamente os processos
+
+
+//STAT do processo//
+0      - não existente
+S      - Sleeping (descansando, fora de funcionamente)
+R      - Running (Rodando)
+I      - Intermediate (Intermediando)
+Z      - Zumbi (Terminando)
+T      - Stopped (Parado)
+W      - Waiting (Esperando)
+
+==================================================
+
+kill - Matando um processo
+
+$ kill [-SINAL] <PID>
+$ kill -9 <PID>
+	Normalmente se usa o -9 no Sinal para forçar e matar o processo
+	uma lista de sinais se encontra com: $ man 7 signal
+
+==================================================
+
+killall - Matando processos pelo nome
+
+$ killall [-SINAL] <comando>
+	Não precisa saber o PID do processo, faz o mesmo do kill
+	Se tiver mais de um processo com o mesmo nome, todos seram finalizados
+===================================================
+
+w - Lista os usuarios logados
+
+$ w 

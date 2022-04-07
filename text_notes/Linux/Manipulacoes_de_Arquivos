@@ -1,0 +1,128 @@
+		Manipulações de Arquivos
+
+cd - Navegar entre diretórios
+ls - Listar arquivos
+mkdir - Criar um Diretorio
+rmdir - Remove um diretório vazio
+cp - Cópia de arquivos e diretórios
+mv - Move Arquivos e diretórios
+rm - Deleta arquivos e diretórios
+ln - linkando arquivos (??????)
+cat - exibe o conteudo de um arquivo ou diretório
+file - indicando tipo de arquivo
+pwd - mostrar caminho completo do diretorio
+
+
+====================================================
+	      Exemplos de usos comuns
+====================================================
+
+cd
+
+$ cd [nome_do_diretorio]
+----------
+.   -> Diretorio atual
+..  -> Diretorio anterior
+~   -> Diretório HOME do usuário
+/   -> Diretório Raiz
+-   -> Ultimo diretório
+-----------
+====================================
+ls - listar arquivos
+
+$ ls [opções] [arquivo/diretorio]
+
+//opções//
+-l    -> Lista os arquivos em formato detalhado
+-a    -> Lista os arquivos ocultos (que começam com um .)
+-h    -> Exibe o tamanho num formato legível (combine com -l)
+-R    -> Lista também os subdiretórios encontrados
+---------------------------------------------------
+//wildcards//
+* - representa tudo
+	$ ls *.txt
+	Vai mostrar todos os arquivos com extensão .txt
+? - substitui um caractere
+	$ ls manual2?.txt
+	Vai mostrar todos os arquivos manual2[x].txt 
+	onde o x é qualquer mudança naquele caractere no nome do arquivo
+=========================================
+
+mkdir - criar um diretorio
+
+$ mkdir <nome_do_diretorio>
+
+==========================================
+rmdir - remove um diretorio que esteja vazio
+
+$ rmdir <nome_do_diretorio>
+
+===========================================
+
+cp - Copia de arquivos e diretorios
+
+$ cp [opções] <arquivo_origem> <arquivo_destino>
+
+//opções//
+-i   -> modo interativo
+-v   -> Mostra o que está sendo copiado
+-R   -> Copia recursivamente (diretorios e subdiretorios)
+============================================
+
+mv - move arquivos
+
+$ mv <arquivo_origem> <arquivo_destino>
+	Pode ser usado para renomear arquivos
+=============================================
+
+rm - deleta arquivos e diretorios
+
+$ rm [opções] <arquivo>
+
+//opções//
+-r  -> apagar o diretorio com todo seu conteudo
+==============================================
+
+ln - linkando arquivos
+
+$ ln -s <arquivo_origem> <link_simbolico>
+	criar um atalho, redicionadores
+===============================================
+
+cat - Exibe o conteúdo de um arquivo
+
+$ cat <arquivo>
+
+//indicadores//
+>    -> faz uma copia
+>>   -> adiciona um arquivo ao outro
+
+================================================
+
+file - indicando tipo de arquivo
+
+$ file <arquivo>
+=================================================
+
+	
+-----------------------------------------------------
+
+-> Espaço em disco
+
+	df -h    -> Mostra o espaço em disco das partições montadas
+	du -hs   -> Mostra o espaço ocupado pelo diretório atual
+
+-> Informações do sistema
+	date      -> mostra a data atual
+	cal       -> mostra o calendario
+	uptime    -> mostra o tempo que a maquina está rodando
+	free      -> exibe a memoria livre, usada e os buffers
+	top       -> mostra os processos que mais gastam memoria
+	uname -a  -> mostra informações de versão do kernel
+-> Programas (console)
+	vi        -> editor de texto
+	pico      -> editor de texto
+	pine      -> leitor de e-mail
+	mutt      -> leitor de e-mail
+	lynx      -> Navegador web
+	links     -> navegador web

@@ -1,0 +1,24 @@
+	Create Directories   (https://linux.die.net/man/2/mkdir)
+
+mkdir [OPTION] [DIRECTORY]
+
+The -v (--verbose) option tells mkdir to print a message for each created directory.
+When the -p option is used, the command creates the directory only if it doesn’t exist.
+
+The mkdir command also allows you to create a complex directory tree with one command:
+
+mkdir -p Music/{Jazz/Blues,Folk,Disco,Rock/{Gothic,Punk,Progressive},Classical/Baroque/Early}
+-> The command above creates the following directory tree :
+Music/
+|-- Classical
+|   `-- Baroque
+|       `-- Early
+|-- Disco
+|-- Folk
+|-- Jazz
+|   `-- Blues
+`-- Rock
+    |-- Gothic
+    |-- Progressive
+    `-- Punk
+Copy

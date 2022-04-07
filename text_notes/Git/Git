@@ -1,0 +1,26 @@
+		Git coisos do treco
+
+-> Clonar repositorio do github:
+
+$ git clone [URL_do_rep]
+
+
+
+-----
+
+
+git status
+
+git add <diretorio_ou_arquivo>
+git commit -m '<mensagem>'
+git push
+
+
+git pull
+
+
+
+
+=====
+links pra coisa que eu não lembro:
+https://github.com/GitCredentialManager/git-credential-manager

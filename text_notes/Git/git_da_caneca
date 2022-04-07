@@ -1,0 +1,98 @@
+		Git da caneca
+
+-> Clonar repositorio do github:
+
+$ git clone [URL_do_rep]
+
+
+
+-> Commit
+
+
+-> Git Basics
+
+$ git init <directory>
+$ git clone <repo>
+$ git config user.name <name>
+$ git add <directory>
+$ git commit -m "<message>"
+$ git status
+$ git log
+$ git diff
+
+=================================
+
+-> undoing changes
+
+$ git revert <commit>
+$ git reset <file>
+$ git clean -n
+
+=================================
+
+-> Git reset
+
+$ git reset
+$ git reset --hard
+$ git reset <commit>
+$ git reset --hard <commit>
+
+=================================
+
+-> Git Rebase
+
+$ rebase -i <base>
+
+=================================
+
+-> Rewriting git history
+
+$ git commit --amend
+$ git rebase <base>
+$ git reflog
+
+=================================
+
+-> Git Log
+
+$ git log -<limit>
+$ git log --oneline
+$ git log -p
+$ git log --stat
+$ git log --author= "<pattern>"
+$ git log --grep= "<pattern>"
+$ git log <since>..<until>
+$ git log -- <file>
+$ git log --graph --decorate
+
+=================================
+
+-> Git Config
+
+$ git config --global user.name <name>
+$ git config --global user.email <email>
+$ git config --global alias. <alias-name>
+$ git config --system core.editor <editor>
+$ git config --global --edit
+
+=================================
+-> Git Branches
+
+$ branch
+$ checkout -b <branch>
+$ merge <branch>
+
+==================================
+
+-> Remote Repositories
+
+$ git remote add <name> <url>
+$ git fetch <remote> <branch>
+$ git pull <remote>
+$ git push <remote> <branch>
+
+===================================
+
+-> 
+
+

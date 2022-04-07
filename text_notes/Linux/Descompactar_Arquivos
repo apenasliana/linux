@@ -1,0 +1,28 @@
+Descompactar Arquivos TAR
+
+
+
+-> Descompactar arquitos
+
+
+///extensão////comando///
+
+.tar.gz   | $ tar zxpvf arquivo.tar.gz
+.tar      | $ tar xpvf arquivo.tar
+.gz       | $ gunzip arquivo.gz
+.tar.bz2  | $ bunzip2 arquivo.tar.bz2 ; tar xpvf arquivo.tar
+.bz2      | $ bunzip2 arquivo.bz2
+.zip      | $ unzip arquivo.zip
+
+========================================
+
+-> Compactar arquivos
+
+///extensão////comando///
+
+.tar       | $ tar cvf diretorio/
+.tar.gz    | $ tar zcvf diretorio/
+.gz        | $ gzip arquivo
+.bz2       | $ bzip2 arquivo
+
+==========================================
