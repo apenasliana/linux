@@ -3,5 +3,5 @@ ___________________________________________________
 
 ## config
     Main configuration file
-    Localization: ~/.config/i3/config
+    home-folder: ~/.config/i3/config
 ___________________________________________________
