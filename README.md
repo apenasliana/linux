@@ -1,7 +1,7 @@
 # Linux
 
 ## .config
-    diretorio com arquivos de configuracao
+    directory with configuration files my of some applications
 
 ## text_notes
-    diretorio com anotacoes
+    directory with some notes for myself

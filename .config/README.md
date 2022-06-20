@@ -1,4 +1,11 @@
 # diretorio de .config's
 
-## qtile
-    arquivos do qtile
+## i3
+    i3 configuration files
+
+## .xinitrc
+    xinit configuratin file
+
+## .mplayer
+    mplayer configuration file
+

@@ -219,6 +219,27 @@ bar {
 
 
 }
+# Set an app to open in a workspace
+# USE xprop to know app(WM_CLASS) name
+
+# Applications
+assign [class="discord"] 2
+assign [class="Spotify"] 10
+assign [class="spotify"] 10
+assign [class="Telegram"] 10
+
+# Steam and game related
+assign [class="Steam"] 9
+assign [class="MTGA"] 7
+assign [class="steam_app_0"] 7
+assign [class="FINAL FANTASY XIV"] 7
+assign [class="steam_app_39210"] 7
+assign [class="XIVLauncher Update"] 7
+assign [class="Celeste.bin.x86_64"] 7
+
+
+
+# startup apps
 exec --no-startup-id discord -c &
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xcompmgr -c &
