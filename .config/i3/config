@@ -186,13 +186,13 @@ for_window [class="^.*"] border pixel 5
 gaps inner 10
 gaps outer 10
 
-# i3 color ## 
+# i3 color ## 2f343a
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #321941 #321941 #321941 #321941 #321941
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.urgent           #b3fbf7 #b3fbf7 #b3fbf7 #b3fbf7   #b3fbf7
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 
@@ -206,14 +206,15 @@ bar {
 	tray_padding 2
 	separator_symbol "|"
 	colors {
-		background #000000
-		statusline #ffffff
+		background #211024
+		statusline #bc81c4
 		separator #666666
-		
-		focused_workspace  #4c7899 #285577 #ffffff
-		active_workspace   #333333 #5f676a #ffffff
-		inactive_workspace #333333 #222222 #888888
-		urgent_workspace   #2f343a #900000 #ffffff
+
+		# outline # background # text
+		focused_workspace  #211024 #211024 #ffffff
+		active_workspace   #3c2241 #3c2241 #ffffff
+		inactive_workspace #333333 #603b66 #b6b6b6
+		urgent_workspace   #b976b2 #7b1570 #ffffff
 		binding_mode       #2f343a #900000 #ffffff
 	}
 
@@ -227,6 +228,7 @@ assign [class="discord"] 2
 assign [class="Spotify"] 10
 assign [class="spotify"] 10
 assign [class="Telegram"] 10
+assign [class="RustDesk"] 10
 
 # Steam and game related
 assign [class="Steam"] 9
@@ -236,6 +238,7 @@ assign [class="FINAL FANTASY XIV"] 7
 assign [class="steam_app_39210"] 7
 assign [class="XIVLauncher Update"] 7
 assign [class="Celeste.bin.x86_64"] 7
+assign [class="TransportFever2"] 7
 
 
 
