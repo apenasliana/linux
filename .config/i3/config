@@ -211,16 +211,17 @@ bar {
 		separator #666666
 
 		# outline # background # text
-		focused_workspace  #211024 #211024 #ffffff
+		focused_workspace  #333333 #603b66  #ffffff
 		active_workspace   #3c2241 #3c2241 #ffffff
-		inactive_workspace #333333 #603b66 #b6b6b6
+		inactive_workspace #211024 #211024 #b6b6b6
 		urgent_workspace   #b976b2 #7b1570 #ffffff
 		binding_mode       #2f343a #900000 #ffffff
 	}
 
 
 }
-# Set an app to open in a workspace
+
+# Set an app to open in a workspace #
 # USE xprop to know app(WM_CLASS) name
 
 # Applications
@@ -242,8 +243,27 @@ assign [class="TransportFever2"] 7
 
 
 
-# startup apps
+# startup commands #
+
+## \/ ONLY ON THE NOTEBOOK \/ ##
+
+# set the correct keyboard layout
+# exec --no-startup-id setxkbmap -model abnt2 -layout br
+
+################################
+
+## \/ ONLY ON THE DESKTOP \/ ##
+
+#set the correct monitor output 
+exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
+
+################################
+
+# auto start apps
 exec --no-startup-id discord -c &
+
+
+# Restore the wallpaper and compositor
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xcompmgr -c &
-exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
+
