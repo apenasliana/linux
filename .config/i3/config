@@ -48,7 +48,8 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # screenshot #
-bindsym $mod+Print exec deepin-screenshot
+# bindsym $mod+Print exec deepin-screenshot
+bindsym $mod+Print exec deepin-screen-recorder
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -85,6 +86,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -110,6 +112,11 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+## clipboard anmsnmasndansesis
+# bindsym $mod+p anamnesis --browse
+#
+
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -224,6 +231,17 @@ bar {
 # Set an app to open in a workspace #
 # USE xprop to know app(WM_CLASS) name
 
+# Workspace specific screen
+# HDMI-0 = Primary
+# DP-5 left of Primary
+workspace 1 output HDMI-0
+workspace 2 output DP-5
+workspace 7 output HDMI-0
+workspace 9 output DP-5
+workspace 10 output DP-5
+
+
+
 # Applications
 assign [class="discord"] 2
 assign [class="Spotify"] 10
@@ -255,12 +273,17 @@ assign [class="TransportFever2"] 7
 ## \/ ONLY ON THE DESKTOP \/ ##
 
 #set the correct monitor output 
-exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
+#exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
+exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-5 --right-of HDMI-0
+
 
 ################################
 
 # auto start apps
 exec --no-startup-id discord -c &
+exec --no-startup-id steam -c &
+exec --no-startup-id anamnesis --start -c &
+exec --no-startup-id xfce4-clipman -c &
 
 
 # Restore the wallpaper and compositor

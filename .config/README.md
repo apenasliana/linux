@@ -29,3 +29,15 @@ Don't forget this applications when formatting
 
 - neofetch (bc arch btw)
 - rustdesk
+
+-------------------------
+
+-> xorg-server xorg-init xorg-apps nvidia
+-> i3-gaps dmenu i3status i3blocks xfce4-terminal firefox git gimp picom thunar
+-> alsa-utils nano nitrogen leafpad 
+-> xcompmgr
+-> xdg-user-dirs 
+$ xdg-user-dirs-update
+--
+
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
