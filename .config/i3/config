@@ -113,10 +113,14 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-## clipboard anmsnmasndansesis
-# bindsym $mod+p anamnesis --browse
-#
+## clipboard manager anamnesis
+# https://aur.archlinux.org/packages/anamnesis
+bindsym $mod+p anamnesis --browse
 
+## sound manager pagraphcontrol
+# https://github.com/futpib/pagraphcontrol
+# sudo modprobe snd_aloop
+bindsym $mod+F12 exec pagraphcontrol --no-sandbox
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -231,14 +235,22 @@ bar {
 # Set an app to open in a workspace #
 # USE xprop to know app(WM_CLASS) name
 
+
+# HDMI-1 = Primary
+# DP-3 = Secondary
+# variables for changing monitor ports
+
+set $primaryMonitor HDMI-0
+set $SecondaryMonitorRIGHT DP-1
+#set $SecondaryMonitorLEFT HDMI-0
+
+
 # Workspace specific screen
-# HDMI-0 = Primary
-# DP-5 left of Primary
-workspace 1 output HDMI-0
-workspace 2 output DP-5
-workspace 7 output HDMI-0
-workspace 9 output DP-5
-workspace 10 output DP-5
+workspace 1 output $primaryMonitor
+workspace 7 output $primaryMonitor
+workspace 2 output $SecondaryMonitorRIGHT
+workspace 9 output $SecondaryMonitorRIGHT
+workspace 10 output $SecondaryMonitorRIGHT 
 
 
 
@@ -250,7 +262,9 @@ assign [class="Telegram"] 10
 assign [class="RustDesk"] 10
 
 # Steam and game related
+# assign [class=""] 7
 assign [class="Steam"] 9
+assign [class="Steam Sign In"] 9
 assign [class="MTGA"] 7
 assign [class="steam_app_0"] 7
 assign [class="FINAL FANTASY XIV"] 7
@@ -258,8 +272,19 @@ assign [class="steam_app_39210"] 7
 assign [class="XIVLauncher Update"] 7
 assign [class="Celeste.bin.x86_64"] 7
 assign [class="TransportFever2"] 7
-
-
+assign [class="EVE"] 7
+assign [class="EVE Launcher"] 7
+assign [class="steam_app_8500"] 7
+assign [class="steam_app_1174180"] 7
+assign [class="Red Dead Redemption 2"] 7
+assign [class="riotclientux.exe"] 7
+assign [class="Riot Client Main"] 7
+assign [class="leagueclient.exe"] 7
+assign [class="leagueclientux.exe"] 7
+assign [class="League of Legends"] 7
+assign [class="Project Zomboid"] 7
+assign [class="RimWorldLinux"] 7
+assign [class="Aseprite"] 7
 
 # startup commands #
 
@@ -274,7 +299,9 @@ assign [class="TransportFever2"] 7
 
 #set the correct monitor output 
 #exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
-exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-5 --right-of HDMI-0
+# exec --no-startup-id xrandr --output HDMI-1 --primary --output DP-3 --right-of HDMI-1
+# exec --no-startup-id xrandr --output $primaryMonitor --primary --output $SecondaryMonitorRIGHT --right-of $primaryMonitor
+
 
 
 ################################
@@ -284,7 +311,7 @@ exec --no-startup-id discord -c &
 exec --no-startup-id steam -c &
 exec --no-startup-id anamnesis --start -c &
 exec --no-startup-id xfce4-clipman -c &
-
+exec --no-startup-id xsetwacom set 'Wacom BambooPT 2FG 4x5 Pen stylus' MapToOutput 1920x1080+0+0 -c &
 
 # Restore the wallpaper and compositor
 exec --no-startup-id nitrogen --restore
