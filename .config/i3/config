@@ -311,7 +311,7 @@ exec --no-startup-id discord -c &
 exec --no-startup-id steam -c &
 exec --no-startup-id anamnesis --start -c &
 exec --no-startup-id xfce4-clipman -c &
-exec --no-startup-id xsetwacom set 'Wacom BambooPT 2FG 4x5 Pen stylus' MapToOutput 1920x1080+0+0 -c &
+# exec --no-startup-id xsetwacom set 'Wacom BambooPT 2FG 4x5 Pen stylus' MapToOutput 1920x1080+0+0 -c &
 
 # Restore the wallpaper and compositor
 exec --no-startup-id nitrogen --restore
