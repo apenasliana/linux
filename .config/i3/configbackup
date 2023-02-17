@@ -211,7 +211,26 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+bar {
+        status_command i3status
+	tray_output HDMI-0
+	tray_padding 2
+	separator_symbol "|"
+	colors {
+		background #211024
+		statusline #bc81c4
+		separator #666666
 
+		# outline # background # text
+		focused_workspace  #333333 #603b66  #ffffff
+		active_workspace   #3c2241 #3c2241 #ffffff
+		inactive_workspace #211024 #211024 #b6b6b6
+		urgent_workspace   #b976b2 #7b1570 #ffffff
+		binding_mode       #2f343a #900000 #ffffff
+	}
+}
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec --no-startup-id polybar -r mybar
 # Set an app to open in a workspace #
 # USE xprop to know app(WM_CLASS) name
 
@@ -262,7 +281,6 @@ assign [class="Riot Client Main"] 7
 assign [class="leagueclient.exe"] 7
 assign [class="leagueclientux.exe"] 7
 assign [class="League of Legends"] 7
-assign [class="league of legends.exe"] 7
 assign [class="Project Zomboid"] 7
 assign [class="RimWorldLinux"] 7
 assign [class="Aseprite"] 7
@@ -281,7 +299,7 @@ assign [class="Aseprite"] 7
 #set the correct monitor output 
 #exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
 # exec --no-startup-id xrandr --output HDMI-1 --primary --output DP-3 --right-of HDMI-1
-exec_always --no-startup-id xrandr --output $primaryMonitor --auto --primary --output $SecondaryMonitorRIGHT --right-of $primaryMonitor
+# exec --no-startup-id xrandr --output $primaryMonitor --primary --output $SecondaryMonitorRIGHT --right-of $primaryMonitor
 
 
 
@@ -295,8 +313,6 @@ exec --no-startup-id xfce4-clipman -c &
 # exec --no-startup-id xsetwacom set 'Wacom BambooPT 2FG 4x5 Pen stylus' MapToOutput 1920x1080+0+0 -c &
 
 # Restore the wallpaper and compositor
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xcompmgr -c &
 
