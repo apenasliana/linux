@@ -17,10 +17,9 @@ export THERMAL_ZONE=$(ls /sys/class/thermal | grep thermal_zone | grep -oE "[0-9
 
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m NETWORK_INTERFACE=$NETWORK_INTERFACE THERMAL_ZONE=$THERMAL_ZONE polybar --reload $THEME -c $CONFIG_DIR  &
+  (MONITOR=$m NETWORK_INTERFACE=$NETWORK_INTERFACE THERMAL_ZONE=$THERMAL_ZONE polybar -l info --reload $THEME -c $CONFIG_DIR ; echo $? >> ~/.config/polybar/debug.log) &
   done
 else
-  NETWORK_INTERFACE=$NETWORK_INTERFACE THERMAL_ZONE=$THERMAL_ZONE polybar --reload $THEME -c $CONFIG_DIR &
-
+  (NETWORK_INTERFACE=$NETWORK_INTERFACE THERMAL_ZONE=$THERMAL_ZONE polybar -l info --reload $THEME -c $CONFIG_DIR; echo $? >> ~/.config/polybar/debug.log) &
 fi
 echo "Bars launched..."

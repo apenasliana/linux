@@ -20,7 +20,7 @@ if type "xrandr"; then
     MONITOR=$m NETWORK_INTERFACE=$NETWORK_INTERFACE THERMAL_ZONE=$THERMAL_ZONE polybar --reload $THEME -c $CONFIG_DIR  &
   done
 else
-  NETWORK_INTERFACE=$NETWORK_INTERFACE THERMAL_ZONE=$THERMAL_ZONE polybar --reload $THEME -c $CONFIG_DIR &
+  polybar $THEME -c $CONFIG_DIR &
 
 fi
 echo "Bars launched..."
