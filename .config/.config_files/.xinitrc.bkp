@@ -67,7 +67,5 @@ export SSH_AUTH_SOCK
 mkdir -p "$HOME"/.local/share/keyrings
 ##        ##
 
-#start-pulseaudio-x11 &
 
-#xrandr --auto
 exec i3

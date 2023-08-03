@@ -11,8 +11,8 @@ alsa_monitor.properties = {
   -- Disable if you are running a system-wide instance, which
   -- doesn't have access to the D-Bus user session
   ["alsa.reserve"] = true,
-  --["alsa.reserve.priority"] = -20,
-  --["alsa.reserve.application-name"] = "WirePlumber",
+  ["alsa.reserve.priority"] = -20,
+  ["alsa.reserve.application-name"] = "WirePlumber",
 
   -- Enables MIDI functionality
   ["alsa.midi"] = true,
@@ -31,8 +31,8 @@ alsa_monitor.properties = {
   -- These properties override node defaults when running in a virtual machine.
   -- The rules below still override those.
   ["vm.node.defaults"] = {
-    ["api.alsa.period-size"] = 2048,
-    ["api.alsa.headroom"] = 0,
+    ["api.alsa.period-size"] = 256,
+    ["api.alsa.headroom"] = 8192,
   },
 }
 
