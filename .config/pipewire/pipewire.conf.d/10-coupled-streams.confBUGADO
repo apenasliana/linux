@@ -1,0 +1,103 @@
+context.modules = [
+    {   name = libpipewire-module-loopback
+        args = {
+            node.name = "desktop"
+            node.description = "Desktop-out"
+            capture.props = {
+		node.name = "alsa-remap.desktop-input"
+                media.class = "Audio/Sink"
+                audio.position = [ FL FR ]
+            }
+            playback.props = {
+                node.name = "alsa-remap.desktop-output"
+                audio.position = [ FL FR ]
+                node.target = "alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.pro-output-0"
+                stream.dont-remix = true
+                node.passive = true
+            }
+        }
+    }
+    {  	name = libpipewire-module-loopback
+	    args = {
+	        node.description = "VodSafe-out"
+	        capture.props = {
+	   	    node.name = "alsa-remap.vodsafe-input"
+	            media.class = "Audio/Sink"
+	            audio.position = [ FL FR ]
+	        }
+	        playback.props = {
+		    node.name = "alsa-remap.vodsafe-output"
+	            audio.position = [ FL FR ]
+	            node.target = "alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.pro-output-0"
+	            stream.dont-remix = true
+	            node.passive = true
+	        }
+            }
+    }
+    {   name = libpipewire-module-loopback
+            args = {
+                node.description = "CaptureCard"
+                capture.props = {
+                    node.name = "capture.CaptureCard-input"
+	            audio.position = [ FL FR ]
+                    node.target = "alsa_input.usb-XF_HDMI_Capture_20000130041415-02.analog-stereo"
+                    stream.dont-remix = true
+                    node.passive = true
+                }
+                playback.props = {
+                    node.name = "CaptureCard-output"
+		    node.target = "alsa-remap.desktop-output"
+                    audio.position = [ FL FR ]
+                }
+            }
+    }
+    {   name = libpipewire-module-loopback
+	    args = {
+	        node.name = "umc22_mic"
+	        node.description = "UMC22 Mic (Pro Audio)"
+	        capture.props = {
+		    audio.position = [ AUX0 ]
+		    node.name = "capture.umc22_mic-input"
+	            node.target = "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.pro-input-0"
+	        }
+	        playback.props = {
+		    node.name = "capture.umc22_mic-output"
+	            media.class = "Audio/Source"
+	            audio.position = [ MONO ]
+	        }
+            }
+    }
+    {   name = libpipewire-module-loopback
+            args = {
+                node.name = "umc22_di"
+                node.description = "UMC22 DI (Pro Audio)"
+                capture.props = {
+	    	    audio.position = [ MONO ]
+	    	    node.name = "capture.umc22_di-input"
+            	    node.target = "alsa_input.usb-Bu'rr-Brown_from_TI_USB_Audio_CODEC-00.pro-input-0"
+                }
+                playback.props = {
+		    node.name = "capture.umc22_di-output"
+                    media.class = "Audio/Source"
+                    audio.position = [ MONO ]
+                }
+            }
+    }
+    {   name = libpipewire-module-loopback
+            args = {
+                node.description = "UMC-loopback"
+                capture.props = {
+                    node.name = "capture.UMC-loopback-input"
+	            audio.position = [ AUX1 ]
+                    node.target = "capture.umc22_di-output"
+                    stream.dont-remix = true
+                    node.passive = true
+                }
+                playback.props = {
+                    node.name = "UMC-loopback-output"
+		    node.target = "alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.pro-output-0"
+                    audio.position = [ MONO ]
+                }
+            }
+    }    
+]
