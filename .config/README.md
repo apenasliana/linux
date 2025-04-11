@@ -1,29 +1,18 @@
 # diretorio de .config's
 
 ## .config_files
-
-    This folder contains some xinit and bash configurations
-
+This folder contains some xinit and bash configurations
 ## misc
-
-    This folder contains some misc files (wallpapers,...)
-
+This folder contains some misc files (wallpapers,...)
 ## i3
-
-    i3 main configuration files
-
+i3 main configuration files
 ## i3status
-
-    i3 bar/status configuration files
-
+i3 bar/status configuration files
 ## .mplayer
-
-    mplayer configuration file
-
+mplayer configuration file
 ## OpenRGB
-
-    OpenRBG is software that controls my keyboard color
-    This folder contains ProfileBackups and some configuration files
+OpenRBG is software that controls my keyboard color
+This folder contains ProfileBackups and some configuration files
 
 ---
 
@@ -31,87 +20,123 @@
 
 ---
 
-Don't forget this applications when formatting
+Don't forget those
 
 ---
 
 ## i3 and some core packages
-
-- xorg-server xorg-xinit xorg-apps nvidia
-- i3-gaps dmenu i3status i3blocks xfce4-terminal firefox git picom thunar
-- alsa-utils nano nitrogen leafpad xcompmgr
-- gnome-keyring polybar
-- xdg-user-dirs
-
+    sudo pacman -Suy 
+     xorg-server xorg-xinit xorg-apps nvidia
+     i3-wm dmenu i3status i3blocks xfce4-terminal firefox git picom thunar
+     alsa-utils nano nitrogen leafpad xcompmgr gnome-keyring polybar
+    
+     xdg-user-dirs
   $ xdg-user-dirs-update $ 
 
 ---
 
-- neofetch htop ranger
+     neofetch htop ranger
 
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 
 ## utils
 
-Yay: 
+### Yay: 
 
     sudo pacman -S git go
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
 
-steam:
-    enable multilib repository,
-    uncomment the [multilib] section in /etc/pacman.conf
+### steam:
+enable multilib repository,
+uncomment the [multilib] section in /etc/pacman.conf
     
     [multilib]
     Include = /etc/pacman.d/mirrorlist
 
-Vscode:
 
-    yay visual-studio-code-bin[https://aur.archlinux.org/packages/visual-studio-code-bin]
+### Vscode:
 
-Wine stuff: https://github.com/lutris/docs/blob/master/WineDependencies.md
+    yay visual-studio-code-bin
+[https://aur.archlinux.org/packages/visual-studio-code-bin]
 
-first enable multilib repository, uncomment the [multilib] section in /etc/pacman.conf
-sudo pacman -S winetricks
-sudo pacman -S --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls \
-mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error \
-lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo \
-sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama \
-ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 \
-lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader
-
-Proton helpers
-
-yay dxvk-bin
-yay gamemode 
+### Misc:
 
 
-openRgb:
-yay (openrgb)[https://aur.archlinux.org/packages/openrgb]
+->Pacman
+
+    rustdesk discord telegram-desktop mplayer
+
+
+-> AUR
+
+    yay google-chrome
+    
+    yay obs-studio-browser 
+
+
+(deepin-screen-recorder)[https://archlinux.org/packages/community/x86_64/deepin-screen-recorder/]
+
+    yay deepin-screen-recorder
+
+(youtubeMusicDesktop)[https://github.com/ytmdesktop/ytmdesktop]
+
+    yay ytmdesktop
+
+
+(openrgb)[https://aur.archlinux.org/packages/openrgb]:
+
+    yay openrgb
 go the README.md on OpenRGB folder for configuration.
 
 
-Misc:
-yay google-chrome
-discord telegram-desktop
-mplayer
-yay obs-studio-browser 
-yay deepin-screen-recorder (https://archlinux.org/packages/community/x86_64/deepin-screen-recorder/)
-- rustdesk
+# Wine & Proton
+
+Wine stuff: https://github.com/lutris/docs/blob/master/WineDependencies.md
+
+*first enable multilib repository*
 
 
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
+    sudo pacman -S winetricks
+
+    sudo pacman -S --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls \
+    
+    sudo pacman -S --needed mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error 
+
+    sudo pacman -S --needed lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo
+
+    sudo pacman -S --needed sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama 
+
+    sudo pacman -S --needed ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 
+
+    sudo pacman -S --needed lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader
+
+Proton helpers
+
+    yay dxvk-bin
+
+    yay gamemode 
+
+
+
+
+
+
 
 
 
 
 # FONTS:
-PACMAN: ttf-roboto noto-fonts ttf-baekmuk noto-fonts-emoji gnu-free-fonts ttf-arphic-uming ttf-indic-otf
+PACMAN: 
+    
+    ttf-roboto noto-fonts ttf-baekmuk noto-fonts-emoji gnu-free-fonts ttf-arphic-uming ttf-indic-otf
 
 
-AUR: ttf-ms-fonts ttf-mplus-git otf-openmoji
+AUR: 
+    
+    ttf-ms-fonts ttf-mplus-git otf-openmoji
 
 | Font Name       | Pacman       | AUR                | Description                                                                                                                                       |
 | --------------- | ------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
