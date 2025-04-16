@@ -1,7 +1,7 @@
 # Linux
 
 ## .config
-    directory with MY configuration files of some applications
+    directory with MY configuration files
 
 ## text_notes
-    directory with some notes for myself
+    directory with some notes
