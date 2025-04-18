@@ -17,7 +17,7 @@ PS1='[\u@\h \W]\$ '
 
 alias audio="pactl load-module module-remap-source master=combined.monitor source_name=virtmic source_properties=device.description=Virtual_Microphone"
 alias log="journalctl -r"
-alias desenho="xinput set-prop 17 \"Device Enabled\" 0 && xsetwacom set \"Wacom BambooPT 2FG 4x5 Pen stylus\" MapToOutput 1920x1080+0+0 && xsetwacom set \"Wacom BambooPT 2FG 4x5 Pen stylus\" PressureCurve 5 0 100 95"
+alias desenho="xinput set-prop 10 \"Device Enabled\" 0 && xsetwacom set \"Wacom One by Wacom M Pen stylus\" MapToOutput 1920x1080+0+0 && xsetwacom set \"Wacom One by Wacom M Pen stylus\" PressureCurve 5 0 100 95"
 
 
 
