@@ -1,3 +1,5 @@
+# lily's .configs
+
 
 ---
 
@@ -5,30 +7,39 @@
 
 ---
 
-Don't forget those
+Don't forget those when doing a fresh install
 
 ---
 
-### i3 and some core packages
-    sudo pacman -Suy 
-     xorg-server xorg-xinit xorg-apps nvidia
-     i3-wm dmenu i3status i3blocks xfce4-terminal firefox git picom thunar
-     alsa-utils nano nitrogen leafpad xcompmgr gnome-keyring polybar
-    
-     xdg-user-dirs
+## i3 and some core packages
+
+- xorg-server xorg-xinit xorg-apps nvidia
+- i3 dmenu i3status i3blo cks xfce4-terminal 
+- firefox git picom thunar
+- alsa-utils nano nitrogen leafpad xcompmgr
+- gnome-keyring polybar
+- xdg-user-dirs
+
   $ xdg-user-dirs-update $ 
 
+- neofetch htop ranger
+
 ---
 
-     neofetch htop ranger
 
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 
+> with that, u are prob good to go! 
+> Remember to check -> ".misc-guides" and the next utils section 
+
+---
+
 # utils
 
-### Yay: 
+## utils
 
+Yay: 
     sudo pacman -S git go
     git clone https://aur.archlinux.org/yay.git
     cd yay
@@ -44,101 +55,11 @@ uncomment the [multilib] section in /etc/pacman.conf
 
 ### Vscode:
 
-    yay visual-studio-code-bin
-[https://aur.archlinux.org/packages/visual-studio-code-bin]
+---
 
-### Misc:
+# extra configs in ".misc-guides"
 
-
-->Pacman
-
-    rustdesk discord telegram-desktop mplayer
-
-
--> AUR
-
-    yay google-chrome
-    
-    yay obs-studio-browser 
-
-
-(deepin-screen-recorder)[https://archlinux.org/packages/community/x86_64/deepin-screen-recorder/]
-
-    yay deepin-screen-recorder
-
-(youtubeMusicDesktop)[https://github.com/ytmdesktop/ytmdesktop]
-
-    yay ytmdesktop
-
-
-(openrgb)[https://aur.archlinux.org/packages/openrgb]:
-
-    yay openrgb
-go the README.md on OpenRGB folder for configuration.
-
-
-# Wine & Proton
-
-Wine stuff: https://github.com/lutris/docs/blob/master/WineDependencies.md
-
-*first enable multilib repository*
-
-
-    sudo pacman -S winetricks
-
-    sudo pacman -S --needed wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls \
-    
-    sudo pacman -S --needed mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error 
-
-    sudo pacman -S --needed lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo
-
-    sudo pacman -S --needed sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama 
-
-    sudo pacman -S --needed ncurses lib32-ncurses ocl-icd lib32-ocl-icd libxslt lib32-libxslt libva lib32-libva gtk3 
-
-    sudo pacman -S --needed lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader
-
-### Proton helpers
-
-    yay dxvk-bin
-
-    yay gamemode 
-
-
-
-
-
-
-
-
-
-
-# FONTS:
-PACMAN: 
-    
-    ttf-roboto noto-fonts ttf-baekmuk noto-fonts-emoji gnu-free-fonts ttf-arphic-uming ttf-indic-otf
-
-
-AUR: 
-    
-    ttf-ms-fonts ttf-mplus-git otf-openmoji
-
-| Font Name       | Pacman       | AUR                | Description                                                                                                                                       |
-| --------------- | ------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Roboto          | (ttf-roboto) | X                  | Default font for newer Android versions where it is complemented by Noto fonts for languages not supported like CJK                               |
-| Noto fonts      | (noto-fonts) | X                  | Google font family with full Unicode coverage if installed with its emoji and CJK optional dependencies                                           |
-| Microsoft fonts | X            | (ttf-ms-fonts^AUR) | Andalé Mono, Courier New, Arial, Arial Black, Comic Sans, Impact, Lucida Sans, Microsoft Sans Serif, Trebuchet, Verdana, Georgia, Times New Roman |
-
-
-### Localization
-| Font Name             | Pacman      | AUR              | Description                                                                                                                 |
-| --------------------- | ----------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Localization/Japanese | X           | ttf-mplus-gitAUR | Modern Gothic style Japanese outline fonts. It includes all of Japanese Hiragana/Katakana, Basic Latin, Latin-1 Supplement, | Latin Extended-A, IPA Extensions and most of Japanese Kanji, Greek, Cyrillic, Vietnamese with 7 weights (proportional) or 5 weights (monospace). |
-| Localization/Korean   | ttf-baekmuk | X                | Collection of Korean TrueType fonts                                                                                         |
-
-### Emojis
-| Font Name  | Pacman                                              | AUR             | Description                                                                                                                                                      |
-| ---------- | --------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Noto-Emoji | noto-fonts-emoji                                    | x               | Google's open-source Emoji 14.0.                                                                                                                                 |
-| Emoji      | X                                                   | otf-openmojiAUR | German University of Design in Schwäbisch Gmünd open-source Emoji 13.0.                                                                                          |
-| Kaomoji    | gnu-free-fonts, ttf-arphic-uming, and ttf-indic-otf | X               | Kaomoji are sometimes referred to as "Japanese emoticons" and are composed of characters from various character sets, including CJK and Indic fonts. For example |
+-> fonts
+-> wine/proton
+-> openRgb
+-> random apps

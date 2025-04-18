@@ -258,22 +258,23 @@ bindsym $mod+r mode "resize"
 # USE xprop to know app(WM_CLASS) name
 
 
-# DP-0 = Primary
-# HDMI-0 = Secondary
+
 # variables for changing monitor ports
 
-set $primaryMonitor DP-0 
-set $SecondaryMonitorRIGHT HDMI-0
-set $SecondaryMonitorLEFT HDMI-1
+set $primaryMonitor "DP-2" 
+set $secondaryMonitor "DP-4"
+# set $monitorTOP
+# set $monitorRIGHT HDMI-0
+# set $monitorLEFT HDMI-1
 
 
 # Workspace specific screen
 workspace 1 output $primaryMonitor
 workspace 7 output $primaryMonitor
-workspace 0 output $SecondaryMonitorRIGHT 
-workspace 2 output $SecondaryMonitorRIGHT
-workspace 9 output $SecondaryMonitorRIGHT
-workspace 10 output $SecondaryMonitorRIGHT 
+workspace 0 output $secondaryMonitor 
+workspace 2 output $secondaryMonitor
+workspace 9 output $secondaryMonitor
+workspace 10 output $secondaryMonitor 
 
 
 
@@ -339,11 +340,10 @@ assign [class="league of legends.exe"] 7
 #set the correct monitor output 
 #exec --no-startup-id xrandr --output HDMI-0 --primary --output DP-1 --left-of HDMI-0
 # exec --no-startup-id xrandr --output HDMI-1 --primary --output DP-3 --right-of HDMI-1
-# exec_always --no-startup-id xrandr --output $primaryMonitor --auto --primary --output $SecondaryMonitorRIGHT --right-of $primaryMonitor
+# exec_always --no-startup-id xrandr --output $primaryMonitor --auto --primary --output $secondaryMonitor --right-of $primaryMonitor
 
-exec_always --no-startup-id xrandr --output $primaryMonitor --primary --mode 1920x1080 --rate 144 --output $SecondaryMonitorRIGHT --mode 1920x1080 --rate 60 --left-of $primaryMonitor
-
-
+# exec_always --no-startup-id xrandr --output $primaryMonitor --primary --output $secondaryMonitor --top-of $primaryMonitor
+exec_always --no-startup-id  xrandr --output "DP-2" --primary --output "DP-4" --right-of "DP-2"
 
 ################################
 
