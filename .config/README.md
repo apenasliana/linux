@@ -35,6 +35,7 @@ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 ---
 
+# utils
 
 ## utils
 
@@ -44,16 +45,15 @@ Yay:
     cd yay
     makepkg -si
 
-steam:
-    enable multilib repository,
-    uncomment the [multilib] section in /etc/pacman.conf
+### steam:
+enable multilib repository,
+uncomment the [multilib] section in /etc/pacman.conf
     
     [multilib]
     Include = /etc/pacman.d/mirrorlist
 
-Vscode:
 
-    yay visual-studio-code-bin[https://aur.archlinux.org/packages/visual-studio-code-bin]
+### Vscode:
 
 ---
 
